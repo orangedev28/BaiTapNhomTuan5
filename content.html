@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Three Column Layout</title>
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch; /* Để container căng ra theo chiều cao của các cột bên trong */
+        width: 100%;
+        height: 70%; /* Hoặc chiều cao mong muốn của container */
+    }
+    .column {
+        padding: 10px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+    }
+    .left-column,
+    .right-column {
+        background-color: #f0f0f0;
+    }
+    .vertical-1,
+    .vertical-2,
+    .vertical-3,
+    .vertical-4 {
+        flex: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .vertical-1 {
+        flex: 10%;
+    }
+    .vertical-2 {
+        flex: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+    .sub-vertical {
+        flex: 20%;
+        margin: 5px;
+    }
+    .vertical-3 {
+        flex: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .vertical-3 > * {
+        margin-bottom: 10px;
+    }
+    .middle-column {
+        width: 20%;
+        background-color: #e0e0e0;
+    }
+    img {
+        width: 100%; /* Chỉnh kích thước ảnh cho phù hợp với container */
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="column left-column">
+            <div class="vertical-1">
+                <button>Trang chủ</button>
+            </div>
+            <div class="vertical-2">
+                <img src="images\thumnails.png" alt="Hình ảnh">
+                <h2>Tiêu đề</h2>
+                <p>Nội dung bài báo</p>
+            </div>
+        </div>
+        <div class="column middle-column">
+            <div class="vertical-1">
+                <button>English</button>
+            </div>
+            <div class="vertical-2">
+                <div class="sub-vertical">
+                    <button>1</button>
+                </div>
+                <div class="sub-vertical">
+                    <button>2</button>
+                </div>
+                <div class="sub-vertical">
+                    <button>3</button>
+                </div>
+                <div class="sub-vertical">
+                    <button>4</button>
+                </div>
+                <div class="sub-vertical">
+                    <button>5</button>
+                </div>
+            </div>
+            <div class="vertical-3">
+                <button>Góc nhìn</button>
+                <img src="https://e-talk.vn/wp-content/uploads/2022/09/kids-post.jpg" alt="Hình ảnh" width="30px" height="30px">
+                <h2>Tiêu đề</h2>
+                <p>Nội dung bài báo</p>
+            </div>
+        </div>
+        <div class="column right-column">
+            <!-- Content for right column -->
+            <div class="vertical-1">
+                <p>Thời gian thực</p>
+            </div>
+            <div class="vertical-2">
+                <img src="images\right-ads-1.png" alt="Hình ảnh">
+            </div>
+            <div class="vertical-3">
+                <img src="images\right-ads-2.png" alt="Hình ảnh">
+            </div>
+            <div class="vertical-4">
+                <img src="images\right-ads-3.png" alt="Hình ảnh">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
